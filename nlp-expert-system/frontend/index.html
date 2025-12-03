@@ -1,11 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NLP Expert System</title>
+  <meta charset="utf-8" />
+  <title>NLP Expert System — 3D UI</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div id="app"></div>
+  <canvas id="bg"></canvas>
+
+  <div id="ui">
+    <h1>NLP Expert System</h1>
+    <textarea id="inputSentence" placeholder="Type an English sentence..."></textarea>
+    <div class="controls">
+      <select id="mode">
+        <option value="standard">Standard</option>
+        <option value="simple">Simple</option>
+        <option value="formal">Formal</option>
+        <option value="professional">Professional</option>
+      </select>
+      <button id="analyzeBtn">Analyze & Improve</button>
+    </div>
+
+    <div id="results">
+      <h2>Results</h2>
+      <div><strong>Original:</strong> <span id="orig"></span></div>
+      <div><strong>Corrected:</strong> <span id="corr"></span></div>
+      <div><strong>Improved:</strong> <span id="impr"></span></div>
+
+      <h3>Rules Fired</h3>
+      <ul id="rulesList"></ul>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/three.min.js"></script>
+  <script src="ui.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
